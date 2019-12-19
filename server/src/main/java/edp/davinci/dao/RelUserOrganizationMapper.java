@@ -45,7 +45,7 @@ public interface RelUserOrganizationMapper {
     @Select({
             "SELECT ruo.id, u.id AS 'user.id', ",
             "    IF(u.`name` is NULL,u.username,u.`name`) AS 'user.username', ",
-            "    u.email, u.avatar AS 'user.avatar', ruo.role AS 'user.role'",
+            "    u.email AS 'user.email', u.avatar AS 'user.avatar', ruo.role AS 'user.role'",
             "FROM `user` u",
             "LEFT JOIN rel_user_organization ruo on ruo.user_id = u.id",
             "LEFT JOIN organization o on o.id = ruo.org_id",
