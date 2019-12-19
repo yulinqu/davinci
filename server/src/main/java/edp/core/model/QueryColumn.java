@@ -31,6 +31,9 @@ public class QueryColumn {
         this.name = name;
         this.type = type.toUpperCase();
     }
+    
+    public QueryColumn() {
+    }
 
     public void setType(String type) {
         this.type = type == null ? Constants.EMPTY : type;
